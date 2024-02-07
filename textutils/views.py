@@ -61,3 +61,6 @@ def analyze(request):
     
 def about_us(request):
     return render(request, 'About_us.html')    
+
+def index2(request):
+    return render(request, 'index2.html')

@@ -18,11 +18,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static 
+from django.conf import settings 
+  
 from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('analyze', views.analyze, name='analyze'),
-    path('about_us/', views.about_us,name='about_us')
-]
+    path('about_us/', views.about_us,name='about_us'),
+    path('home/',views.index2,name="home"),
+    path('analyze', views.analyze, name="analyze"),
+] 
+    
+    
